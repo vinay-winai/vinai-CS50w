@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=0.8">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<title>Google Images</title>
+<link rel="icon" href="Google__G__Logo.svg" type="image/icon type">
+<link rel="stylesheet" href="styles.css">
+<style>
+    #butt{
+        display: flex;
+        flex: 0 0 auto;
+        padding-right: 13px;
+        height: 44px;
+        width: 31px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        flex: 0 0 auto;
+        padding: 0;
+    }
+    #fin{
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+        color: rgba(0,0,0,.87);
+        word-wrap: break-word;
+        outline: none;
+        display: flex;
+        flex: 100%;
+        -webkit-tap-highlight-color: transparent;
+        height: 34px;
+        font-size: 16px;
+    }
+    form:hover{
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+    }
+    form:focus-within{
+        outline:none;
+        box-shadow:0 0 10px rgba(0,0,0,.2)
+    }
+    #fin {
+        margin-top: 3px;
+    }
+
+</style>
+</head>
+
+<body>
+<ul >
+    <li><a id="ls" href="index.html">Google Search</a></li>
+</ul>
+<center class ="main1" >   
+    <img src="Google_Images_2015_logo.svg" alt="Google" width="272px">
+    <form  class="box" action="https://www.google.com/search">
+        <input id="fin" type="text" name="q">
+        <button id="butt" type="submit">
+            <div style="background: none;color: #4285f4;
+                height: 24px;width: 24px;margin: auto;">
+                <span class="material-icons">search</span>
+            </div>
+        </button>
+        <input type="hidden" name="tbm" value="isch">
+    </form>
+</center>
+</body>
+</html>
