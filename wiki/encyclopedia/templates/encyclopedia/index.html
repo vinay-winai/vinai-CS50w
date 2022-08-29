@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {% if search %}
+        {{sterm}} - Wiki
+    {% else %}
+        Encyclopedia
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    {% if search %}
+        <h1>This '{{sterm}}' exact page doesn't exist.</h1>
+        <h3>Here are some relevant pages.</h3>
+    {% else %}
+        <h1>All Pages</h1>
+    {% endif %}
+    <ul>
+        {% for entry in entries %}
+            <a href="{% url 'entry' entry %}"><li>{{entry}}</li></a>
+        {% endfor %}
+    </ul>
+{% endblock %}

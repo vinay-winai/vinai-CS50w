@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title}} - Wiki
+{% endblock %}
+
+{% block body %}
+    {% if content %}
+        {{content|safe}}
+        <a href="{% url 'edit' title %}" ><button type="button" class="btn btn-primary">Edit</button></a>
+    {% else %}
+        <h1>Page titled "{{title}}" doesn't exist.</h1>
+        <h3>You can create a new page.</h3>
+        <a href="{% url 'new' %}" ><button type="button" class="btn btn-primary">Create new page</button></a>
+    {% endif %}
+{% endblock %}
+
