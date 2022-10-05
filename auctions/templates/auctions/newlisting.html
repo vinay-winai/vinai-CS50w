@@ -1,17 +1,19 @@
 {% extends "auctions/layout.html" %}
 
 {% block title %}
-    New Listing
+    Auctions-New Listing
 {% endblock %}
+
 {% block body %}
     {% if message %}
         <div class="alert alert-warning col-md-10 col-lg-10" role="alert">   
             <h3>{{message}}</h3>
         </div> 
     {% endif %}
-    <form action="{% url 'newlisting' %}" method="post">
+    <form action="{% url 'new_listing' %}" method="post">
         {% csrf_token %}
         {{ form }}
         <button style="margin-top:30px ;" type="submit" class="btn btn-primary">Submit</button>
     </form>
 {% endblock %}
+

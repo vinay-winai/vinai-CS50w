@@ -18,7 +18,7 @@ from django.urls import include, path
 from auctions.views import login_view
 
 urlpatterns = [
+    path("auctions/", include("auctions.urls")),
     path("admin/", admin.site.urls),
-    path("vbay/", include("auctions.urls")),
     path("accounts/login/", login_view, name="login"),
 ]

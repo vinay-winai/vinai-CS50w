@@ -5,7 +5,9 @@
     <h2>Register</h2>
 
     {% if message %}
-        <div>{{ message }}</div>
+        <div class="alert alert-danger col-md-10 col-lg-10" role="alert">   
+            <h3>{{message}}</h3>
+        </div>
     {% endif %}
 
     <form action="{% url 'register' %}" method="post">
