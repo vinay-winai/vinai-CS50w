@@ -1,5 +1,0 @@
-{
-    "python.linting.pylintEnabled": true,
-    "workbench.settings.useSplitJSON": true,
-    "python.linting.pylintPath": "pylint"
-}
