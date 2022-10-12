@@ -1,0 +1,38 @@
+{% extends "auctions/layout.html" %}
+
+{% block title %}
+  Auctions
+  {% if wl %}
+  - Watch List
+  {% elif cat %}
+  - {{cat}}
+  {% endif %}
+{% endblock %}
+
+{% block body %}
+    <h2>
+      {% if wl %}
+        Watch List
+      {% elif cat %}
+        Active Listings - {{cat}}
+      {% else %}
+        Active Listings
+      {% endif %}
+    </h2> 
+    {% if not listings %}
+      <h3>Coming Soon</h3>
+    {% endif %}
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 g-4">
+      {% for listing in listings %}
+          <a href="{% url 'listing' listing.id %}" class="col listing">
+            <div class="card h-100">
+              <img src= "{{listing.img}}" class="card-img-top pic" alt="...">
+              <div class="card-body">
+                <p class="card-text"><b>{{listing.title}}</b> {{listing.description}}</p>
+                <p class="card-text price">₹{{listing.curr_bid}}</p>
+              </div>
+            </div>
+          </a>
+      {% endfor %}
+    </div>
+{% endblock %}
